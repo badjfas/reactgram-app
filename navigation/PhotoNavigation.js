@@ -10,7 +10,7 @@ const Tab = createMaterialTopTabNavigator();
 
 const PhotoTabs= () => {
     return(
-        <Tab.Navigator headerMode="none" tabBarPosition="bottom">
+        <Tab.Navigator tabBarPosition="bottom">
             <Tab.Screen name="SelectPhoto" component={SelectPhoto}/>
             <Tab.Screen name="TakePhoto" component={TakePhoto}/>
         </Tab.Navigator>

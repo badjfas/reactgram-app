@@ -10,9 +10,10 @@ const Stack = createStackNavigator();
 export default () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="TabNavigation" headerMode="none" mode="modal">
+      <Stack.Navigator initialRouteName="TabNavigation " headerMode="none" mode="modal">
+      <Stack.Screen name="TabNavigation" component={TabNavigation} />
+
         <Stack.Screen name="PhotoNavigation" component={PhotoNavigation} />
-        <Stack.Screen name="TabNavigation" component={TabNavigation} />
       </Stack.Navigator>
     </NavigationContainer>
   );
