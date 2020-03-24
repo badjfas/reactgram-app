@@ -10,7 +10,6 @@ import Notifications from "../stack/StackNotifications";
 import Profile from "../stack/StackProfile";
 import { createStackNavigator } from "@react-navigation/stack";
 
-
 const Tab = createBottomTabNavigator();
 
 export default ({navigation}) => {
