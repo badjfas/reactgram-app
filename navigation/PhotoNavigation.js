@@ -8,7 +8,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 
 const Tab = createMaterialTopTabNavigator();
 
-const PhotoTabs= () => {
+const PhotoTabs= ({navigation}) => {
     return(
         <Tab.Navigator tabBarPosition="bottom">
             <Tab.Screen name="SelectPhoto" component={SelectPhoto}/>
@@ -19,9 +19,9 @@ const PhotoTabs= () => {
 
 const Stack = createStackNavigator();
 
-export default () =>{
-    return (
-        <Stack.Navigator headerMode="none">
+export default ({navigation,scene}) =>{
+        return (
+        <Stack.Navigator headerMode="screen" >
             <Stack.Screen name="PhotoTabs" component={PhotoTabs}/>
             <Stack.Screen name="UploadPhoto" component={UploadPhoto}/>
         </Stack.Navigator>
