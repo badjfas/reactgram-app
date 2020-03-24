@@ -1923,10 +1923,10 @@
     color "^3.1.2"
     react-native-iphone-x-helper "^1.2.1"
 
-"@react-navigation/compat@^5.1.5":
-  version "5.1.5"
-  resolved "https://registry.yarnpkg.com/@react-navigation/compat/-/compat-5.1.5.tgz#0b5a31e2ceafb84769eabaa68386266ac3ba46a4"
-  integrity sha512-luhrNzaDhzeaDykPdcY6AjE2jEd8vlQ6WdYCMk4LjHgTKWeDdEV8M9U/++MLgmFOYyAkU7YwNA9O0LukAaAFqA==
+"@react-navigation/compat@^5.1.6":
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/@react-navigation/compat/-/compat-5.1.6.tgz#22f59ba552efe849fdeea7b42532e11265bfea07"
+  integrity sha512-Hg5HWnP/YntevH1JJ5c/iYpn9vlIB7fFnPrL6tPcRLvUsGy7LKlogMlTrjKkZsBhsH5CVw56V+k5AG4ckvEJGg==
 
 "@react-navigation/core@^3.6.1":
   version "3.6.1"
@@ -1938,10 +1938,10 @@
     query-string "^6.11.0"
     react-is "^16.8.6"
 
-"@react-navigation/core@^5.3.0":
-  version "5.3.0"
-  resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-5.3.0.tgz#e7170ffbf09508ae94d84dd5ec3f65bfeb444cf3"
-  integrity sha512-fQ/3IdxBVKcdiUx4BA9aDycKDIJIEanzYuq3B+XFV5R1tp6Zu137nSDNXv+iavEtcv5KWYZiCB+CP6QIMGZbxA==
+"@react-navigation/core@^5.3.1":
+  version "5.3.1"
+  resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-5.3.1.tgz#8940c3d2aa953952dba6515a48e3adbc0bf73f01"
+  integrity sha512-Ae8EcqkjdozQyjSIYIxnwM/uy/BMxaVDHq1zbK2GXoSaloPDErtabo647IHDIldww8obp7G5wi1SHTkEIXs6gA==
   dependencies:
     "@react-navigation/routers" "^5.2.0"
     escape-string-regexp "^2.0.0"
@@ -1965,12 +1965,12 @@
     hoist-non-react-statics "^3.3.2"
     react-native-safe-area-view "^0.14.8"
 
-"@react-navigation/native@^5.1.2":
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-5.1.2.tgz#112f55e0af140405be6c03d3cf545ee211f865fb"
-  integrity sha512-v9a65hgDEdiBI1SU6FTzED8D8J9fhN2C63t9kpCI3aI2EETxV4dTf1G3vBDJxVujdzwmYieClrjEfatfQMtFMw==
+"@react-navigation/native@^5.1.3":
+  version "5.1.3"
+  resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-5.1.3.tgz#05c9957a2b4e5b4bd66d389ed71237c2887a80d3"
+  integrity sha512-JnoeLoI3O3/FocT7zQ8/2sNtP/D0MEo3BgIMzSQTqWF/tuuBX1Ue4Zgx1eFnckaOuomp+VRNtml+NoXMGqIyFg==
   dependencies:
-    "@react-navigation/core" "^5.3.0"
+    "@react-navigation/core" "^5.3.1"
 
 "@react-navigation/routers@^5.2.0":
   version "5.2.0"
