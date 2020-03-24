@@ -1,14 +1,14 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @react-navigation/compat
+  C:\Program Files\nodejs\node.exe C:\Users\bjwko\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add prop-types
 
 PATH: 
-  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files (x86)\ESTsoft\ALZip;C:\Program Files\dotnet\;C:\Program Files\Java\jdK-11.0.2\bin;C:\Program Files\Java\jdk-11.0.2\bin;C:\Apache24\bin;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\Yarn\bin\;C:\Users\bjwko\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\ESTsoft\ALZip;;C:\Users\bjwko\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\bjwko\AppData\Roaming\npm;C:\Users\bjwko\AppData\Local\Yarn\bin
+  C:\Program Files\AdoptOpenJDK\jdk-11.0.6.10-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\AdoptOpenJDK\jdk-11.0.6.10-hotspot\\bin;C:\Users\bjwko\AppData\Local\Microsoft\WindowsApps;C:\Users\bjwko\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\bjwko\AppData\Roaming\npm;C:\Program Files\Bandizip\;C:\Program Files\AdoptOpenJDK\jdk-11.0.6.10-hotspot\\bin;
 
 Yarn version: 
-  1.22.4
+  1.21.1
 
 Node version: 
-  12.16.1
+  12.14.1
 
 Platform: 
   win32 x64
@@ -30,8 +30,9 @@ npm manifest:
       "@expo/vector-icons": "^10.0.6",
       "@react-native-community/masked-view": "0.1.5",
       "@react-navigation/bottom-tabs": "^5.2.3",
+      "@react-navigation/compat": "^5.1.6",
       "@react-navigation/material-top-tabs": "^5.1.5",
-      "@react-navigation/native": "^5.1.2",
+      "@react-navigation/native": "^5.1.3",
       "@react-navigation/stack": "^5.2.4",
       "apollo-boost": "^0.4.7",
       "apollo-cache-inmemory": "^1.6.5",
@@ -1991,6 +1992,11 @@ Lockfile:
       color "^3.1.2"
       react-native-iphone-x-helper "^1.2.1"
   
+  "@react-navigation/compat@^5.1.6":
+    version "5.1.6"
+    resolved "https://registry.yarnpkg.com/@react-navigation/compat/-/compat-5.1.6.tgz#22f59ba552efe849fdeea7b42532e11265bfea07"
+    integrity sha512-Hg5HWnP/YntevH1JJ5c/iYpn9vlIB7fFnPrL6tPcRLvUsGy7LKlogMlTrjKkZsBhsH5CVw56V+k5AG4ckvEJGg==
+  
   "@react-navigation/core@^3.6.1":
     version "3.6.1"
     resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-3.6.1.tgz#1b8922d9b0e6d74bd9d8802d1eaf21271c90a648"
@@ -2001,10 +2007,10 @@ Lockfile:
       query-string "^6.11.0"
       react-is "^16.8.6"
   
-  "@react-navigation/core@^5.3.0":
-    version "5.3.0"
-    resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-5.3.0.tgz#e7170ffbf09508ae94d84dd5ec3f65bfeb444cf3"
-    integrity sha512-fQ/3IdxBVKcdiUx4BA9aDycKDIJIEanzYuq3B+XFV5R1tp6Zu137nSDNXv+iavEtcv5KWYZiCB+CP6QIMGZbxA==
+  "@react-navigation/core@^5.3.1":
+    version "5.3.1"
+    resolved "https://registry.yarnpkg.com/@react-navigation/core/-/core-5.3.1.tgz#8940c3d2aa953952dba6515a48e3adbc0bf73f01"
+    integrity sha512-Ae8EcqkjdozQyjSIYIxnwM/uy/BMxaVDHq1zbK2GXoSaloPDErtabo647IHDIldww8obp7G5wi1SHTkEIXs6gA==
     dependencies:
       "@react-navigation/routers" "^5.2.0"
       escape-string-regexp "^2.0.0"
@@ -2028,12 +2034,12 @@ Lockfile:
       hoist-non-react-statics "^3.3.2"
       react-native-safe-area-view "^0.14.8"
   
-  "@react-navigation/native@^5.1.2":
-    version "5.1.2"
-    resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-5.1.2.tgz#112f55e0af140405be6c03d3cf545ee211f865fb"
-    integrity sha512-v9a65hgDEdiBI1SU6FTzED8D8J9fhN2C63t9kpCI3aI2EETxV4dTf1G3vBDJxVujdzwmYieClrjEfatfQMtFMw==
+  "@react-navigation/native@^5.1.3":
+    version "5.1.3"
+    resolved "https://registry.yarnpkg.com/@react-navigation/native/-/native-5.1.3.tgz#05c9957a2b4e5b4bd66d389ed71237c2887a80d3"
+    integrity sha512-JnoeLoI3O3/FocT7zQ8/2sNtP/D0MEo3BgIMzSQTqWF/tuuBX1Ue4Zgx1eFnckaOuomp+VRNtml+NoXMGqIyFg==
     dependencies:
-      "@react-navigation/core" "^5.3.0"
+      "@react-navigation/core" "^5.3.1"
   
   "@react-navigation/routers@^5.2.0":
     version "5.2.0"
