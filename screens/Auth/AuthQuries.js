@@ -17,3 +17,19 @@ export const CONFIRM_SECRET= gql`
     )
   }
 `;
+
+export const CREATE_USER= gql`
+    mutation createAccount(
+    $userName: String!
+    $email: String!
+    $firstName: String!
+    $lastName: String!
+    ) {
+        createAccount(
+            userName: $userName
+            email: $email
+            firstName: $firstName
+            lastName: $lastName
+            )
+    }
+`;

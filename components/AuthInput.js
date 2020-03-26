@@ -21,7 +21,7 @@ const AuthInput = ({
   keyboardType = "default",
   onChange,
   onSubmitEditing = () => null,
-  autoCorrect = true
+  autoCorrect = true,
 }) => (
   <Container>
     <TextInput
@@ -31,6 +31,7 @@ const AuthInput = ({
       onChangeText={onChange}
       onSubmitEditing={onSubmitEditing}
       autoCorrect={autoCorrect}
+      
     />
   </Container>
 );
