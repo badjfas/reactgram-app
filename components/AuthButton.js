@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import constants from "../constants";
+import { ActivityIndicator } from "react-native";
 
 const Tochable = styled.TouchableOpacity`
 
@@ -20,12 +21,10 @@ text-align:center;
 font-weight:600;
 `;
 
-const AuthButton = ({text,onPress}) => (
-    <Tochable onPress={onPress}>
+const AuthButton = ({text,onPress,loading=false}) => (
+    <Tochable disabled={loading} onPress={onPress}>
         <Container>
-            <Text>
-                {text}
-            </Text>
+                {loading ? <ActivityIndicator color={"white"}/> : <Text>{text}</Text>}
         </Container>
     </Tochable>
 )

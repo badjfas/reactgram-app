@@ -20,7 +20,7 @@ const AuthInput = ({
   value,
   keyboardType = "default",
   onChange,
-  onEndEditing = () => null,
+  onSubmitEditing = () => null,
   autoCorrect = true
 }) => (
   <Container>
@@ -29,7 +29,7 @@ const AuthInput = ({
       placeholder={placeholder}
       keyboardType={keyboardType}
       onChangeText={onChange}
-      onEndEditing={onEndEditing}
+      onSubmitEditing={onSubmitEditing}
       autoCorrect={autoCorrect}
     />
   </Container>
