@@ -6,7 +6,8 @@ import MessagesLink from "../components/MessagesLink";
 import { useNavigation } from "@react-navigation/native";
 import styled from "styled-components";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { Text, Button, ColorPropType } from "react-native";
+import { Text, Button, Image } from "react-native";
+import {Ionicons} from "@expo/vector-icons";
 
 const Stack = createStackNavigator();
 
@@ -17,10 +18,13 @@ export default ({navigation}) => {
         name="메인"
         component={Home}
         options={{
-          title: "My home",
+          headerTitle: (<Image stretch= {{
+            resizeMode: 'contain',
+          }} source={require("../assets/logo.png")}/>),
+          headerStyle: {
+            },
           headerRight: () => (
             <TouchableOpacity
-              title="Hioooo"
               onPress={() => {
                 navigation.navigate("MessageNavigation");
               }}

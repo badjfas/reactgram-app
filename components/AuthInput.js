@@ -17,9 +17,10 @@ const TextInput = styled.TextInput`
 const AuthInput = ({
   autoCapitalize = "none",
   placeholder,
-  value,
   keyboardType = "default",
   onChange,
+  setValue,
+  value,
   onSubmitEditing = () => null,
   autoCorrect = true,
 }) => (
@@ -31,7 +32,7 @@ const AuthInput = ({
       onChangeText={onChange}
       onSubmitEditing={onSubmitEditing}
       autoCorrect={autoCorrect}
-      
+      value={value}
     />
   </Container>
 );

@@ -7,7 +7,7 @@ import SignUp from "../screens/Auth/SignUp";
 import Confirm from "../screens/Auth/Confirm";
 import AuthHome from "../screens/Auth/AuthHome";
 import Login from "../screens/Auth/Login";
-
+import TabNavigation from "../navigation/TabNavigation"
 const AuthNavigation = createStackNavigator();
 
 export default () => {
@@ -16,7 +16,7 @@ export default () => {
             <AuthNavigation.Navigator initialRouteName="AuthHome" headerMode="none">
                 <AuthNavigation.Screen name="SignUp" component={SignUp} />
                 <AuthNavigation.Screen name="Confirm" component={Confirm} />
-                <AuthNavigation.Screen name="AuthHome" component={AuthHome} />
+                <AuthNavigation.Screen name="AuthHome" component={TabNavigation} />
                 <AuthNavigation.Screen name="Login" component={Login} />
             </AuthNavigation.Navigator>
         </NavigationContainer>

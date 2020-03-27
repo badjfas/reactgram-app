@@ -5,8 +5,10 @@ import AuthInput from "../../components/AuthInput";
 import useInput from "../../hooks/useInput";
 import { Alert, TouchableWithoutFeedback, Keyboard } from "react-native";
 import { useMutation } from "react-apollo-hooks";
-
 import { LOGIN } from "./AuthQuries";
+import { useLogIn } from "../../AuthContext";
+
+
 
 const View = styled.View`
   justify-content: center;
@@ -17,6 +19,7 @@ const View = styled.View`
 const Text = styled.Text``;
 
 export default ({navigation}) => {
+  const logIn = useLogIn();
   const emailInput = useInput("");
   const [loading, setLoading] = useState(false);
   const  [requestSecretMutation] = useMutation(LOGIN,{variables:{
@@ -51,6 +54,7 @@ export default ({navigation}) => {
     }
   };
 
+
   return (
     <TouchableWithoutFeedback onPress={Keyboard.dismiss} >
       <View>
@@ -62,6 +66,8 @@ export default ({navigation}) => {
           autoCorrect={false}
         />
         <AuthButton loading={loading }text={"로그인"} onPress={handleLogin} />
+
+
       </View>
     </TouchableWithoutFeedback>
   );

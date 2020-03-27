@@ -8,8 +8,8 @@ const Tochable = styled.TouchableOpacity`
 `;
 
 const Container = styled.View`
-background-color : ${props => props.theme.blueColor};
-padding:10px 0px;
+background-color: ${props =>
+    props.bgColor ? props.bgColor : props.theme.blueColor};padding:10px 0px;
 width:${constants.width-150};
 border-radius : 5px;
 margin-bottom:25px;
@@ -21,9 +21,9 @@ text-align:center;
 font-weight:600;
 `;
 
-const AuthButton = ({text,onPress,loading=false}) => (
-    <Tochable disabled={loading} onPress={onPress}>
-        <Container>
+const AuthButton = ({text,onPress,loading=false,bgColor = null}) => (
+    <Tochable disabled={loading} onPress={onPress} >
+        <Container bgColor={bgColor}>
                 {loading ? <ActivityIndicator color={"white"}/> : <Text>{text}</Text>}
         </Container>
     </Tochable>
