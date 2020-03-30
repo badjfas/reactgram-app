@@ -7,30 +7,41 @@ import { useNavigation } from "@react-navigation/native";
 import styled from "styled-components";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { Text, Button, Image } from "react-native";
-import {Ionicons} from "@expo/vector-icons";
+import { SimpleLineIcons , AntDesign} from "@expo/vector-icons";
+import { LogoIcon, MessegeIcon } from "../components/NavIcon";
 
 const Stack = createStackNavigator();
+const Container = styled.TouchableOpacity`
+  padding-right : 20px;
 
+`;
+const LogoContainer = styled.TouchableOpacity`
+  margin-left : 12px;
+`;
 export default ({navigation}) => {
   return (
-    <Stack.Navigator headerMode="screen">
+    <Stack.Navigator headerMode="screen" >
       <Stack.Screen
-        name="메인"
+        name=" "
         component={Home}
         options={{
-          headerTitle: (<Image stretch= {{
-            resizeMode: 'contain',
-          }} source={require("../assets/logo.png")}/>),
-          headerStyle: {
-            },
+          headerStyle:{backgroundColor:"#fafafa"},
+          headerLeft: () => (
+            <LogoContainer>
+              <LogoIcon/>
+            </LogoContainer>
+          ),
           headerRight: () => (
-            <TouchableOpacity
+            <Container
               onPress={() => {
                 navigation.navigate("MessageNavigation");
               }}
             >
-              <Text>Messages</Text>
-            </TouchableOpacity>
+              <Text>
+                {" "}
+                <MessegeIcon/>
+              </Text>
+            </Container>
           ),
           headerTitleAlign: "center"
         }}

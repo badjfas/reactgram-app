@@ -20,7 +20,7 @@ const Text = styled.Text``;
 
 export default ({navigation}) => {
   const logIn = useLogIn();
-  const emailInput = useInput("");
+  const emailInput = useInput("bjwkor@naver.com");
   const [loading, setLoading] = useState(false);
   const  [requestSecretMutation] = useMutation(LOGIN,{variables:{
     email:emailInput.value

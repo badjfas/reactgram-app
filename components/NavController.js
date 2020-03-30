@@ -16,7 +16,8 @@ export default () => {
       {isLoggedIn ? (
         <MainNavigation/>
       ) : (
-        <AuthNavigation/>
+       // <MainNavigation/>
+       <AuthNavigation/>
       )}
     </View>
   );
