@@ -29,7 +29,7 @@ export default ({navigation}) => {
         }}/>
         <Tab.Screen name="Search" component={Search} options={{
           tabBarIcon:({focused})=>(
-            <SearchIcon color={focused?styles.blackColor:styles.darkGreyColor}/>
+            <SearchIcon size={30} color={focused?styles.blackColor:styles.darkGreyColor}/>
           )
         }}/>
         <Tab.Screen

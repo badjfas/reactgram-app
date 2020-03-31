@@ -7,8 +7,8 @@ export const HomeIcon = ({name,color}) => (
     <Foundation name="home" size={35} color={color}/>
 )
 
-export const SearchIcon = ({name,color}) => (
-    <FontAwesome name="search" size={30} color={color}/>
+export const SearchIcon = ({name,color,size}) => (
+    <FontAwesome name="search" size={size} color={color}/>
 )
 
 export const AddIcon = ({name,color}) => (
