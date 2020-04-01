@@ -67,9 +67,6 @@ export default () => {
     }
   };
 
-
-
-  console.log(data);
   return (
   <ScrollView
       refreshControl={

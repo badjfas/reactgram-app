@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Loader from "../../components/Loader";
+import { useRoute } from "@react-navigation/native";
 
 const View = styled.View`
   justify-content: center;
@@ -10,8 +11,14 @@ const View = styled.View`
 
 const Text = styled.Text``;
 
-export default () => (
+export default ({navigation}) => {
+  const route = useRoute();
+  const {termInput} =route.params?.termInput ?? "error"
+  console.log(termInput,"params");
+  return(
   <View>
-    <Loader/>
+    <Text>
+    {termInput,"asdasd"}
+    </Text>
   </View>
-);
+);}
