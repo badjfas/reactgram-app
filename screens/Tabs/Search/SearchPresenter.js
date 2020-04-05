@@ -9,7 +9,6 @@ import { Post } from "../../../components/Post";
 
 
 const SearchPresenter = ({data,loading}) => {
-console.log(data);
   const [refreshing, setRefreshing] = useState(false);
 
   const onRefresh = async() => {
@@ -30,7 +29,7 @@ console.log(data);
       ) : (
         data &&
         data.searchPost &&
-        data.searchPost.map(post => <SquarePhoto key={post.id} {...post}/>)
+        data.searchPost.map(post => <SquarePhoto key={post.id} {...post} data={post.id}/>)
       )}
     </ScrollView>
   );

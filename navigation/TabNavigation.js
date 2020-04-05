@@ -9,11 +9,11 @@ import Home from "../stack/StackHome";
 import Search from "../stack/StackSearch";
 import Notifications from "../stack/StackNotifications";
 import Profile from "../stack/StackProfile";
-import Detail from "../screens/Tabs/Detail";
 
 import styled from "styled-components";
 import { HomeIcon, AddIcon, SearchIcon, NotificationIcon, ProfileIcon } from "../components/NavIcon";
 import styles from "../styles";
+import Detail from "../screens/Tabs/Detail";
 
 const Tab = createBottomTabNavigator();
 
@@ -25,7 +25,7 @@ export default ({navigation}) => {
     <Tab.Navigator
       tabBarOptions={{
         showLabel: false,
-        style: { backgroundColor: "#fafafa" }
+        style: { backgroundColor: "#fafafa" },
       }}
     >
       <Tab.Screen
@@ -36,7 +36,7 @@ export default ({navigation}) => {
             <HomeIcon
               color={focused ? styles.blackColor : styles.darkGreyColor}
             />
-          )
+          ),
         }}
       />
       <Tab.Screen
@@ -48,7 +48,7 @@ export default ({navigation}) => {
               size={30}
               color={focused ? styles.blackColor : styles.darkGreyColor}
             />
-          )
+          ),
         }}
       />
       <Tab.Screen
@@ -65,7 +65,7 @@ export default ({navigation}) => {
                 color={focused ? styles.blackColor : styles.darkGreyColor}
               />
             </Container>
-          )
+          ),
         }}
       />
       <Tab.Screen
@@ -77,7 +77,7 @@ export default ({navigation}) => {
               color={focused ? styles.blackColor : styles.darkGreyColor}
               name={focused ? "md-heart" : "md-heart-empty"}
             />
-          )
+          ),
         }}
       />
       <Tab.Screen
@@ -88,10 +88,13 @@ export default ({navigation}) => {
             <ProfileIcon
               color={focused ? styles.blackColor : styles.darkGreyColor}
             />
-          )
+          ),
+          tabBarVisible: false,
         }}
       />
-      
+      <Tab.Screen name="Detail" component={Detail} options={{
+        tabBarVisible:false,
+      }}/>
     </Tab.Navigator>
   );
 };

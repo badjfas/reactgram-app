@@ -38,3 +38,7 @@ export const HeartIcon = ({name,style,color}) => (
 export const CommentIcon = ({name,style,size}) => (
     <SimpleLineIcons name="bubble" size={size} color="black" style={style}/>
 )
+
+export const BackArrowIcon = ({size,color,style}) => (
+    <Feather name="arrow-left" size={size} color={color} style={style} />
+)

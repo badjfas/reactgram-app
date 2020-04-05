@@ -5,10 +5,11 @@ import Profile from "../screens/Tabs/Profile";
 
 const Stack = createStackNavigator();
 
-export default () =>{
+export default ({navigation,route}) =>{
+    console.log(route.params)
         return (
         <Stack.Navigator headerMode="screen" >
-            <Stack.Screen name="Profile" component={Profile}/>
+            <Stack.Screen name="userName" component={Profile}/>
         </Stack.Navigator>
     )
 }
