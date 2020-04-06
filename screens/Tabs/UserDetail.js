@@ -33,7 +33,7 @@ export default ({route})=> {
 
     return (
       <ScrollView style={{marginTop:21}}>
-        {loading ? <Loader/> : data?.seeUser && <UserProfile {...data?.seeUser}/>}
+        {loading ? <Loader/> : null}
       </ScrollView>
     );
 }

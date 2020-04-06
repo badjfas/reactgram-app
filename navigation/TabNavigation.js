@@ -14,6 +14,7 @@ import styled from "styled-components";
 import { HomeIcon, AddIcon, SearchIcon, NotificationIcon, ProfileIcon } from "../components/NavIcon";
 import styles from "../styles";
 import Detail from "../screens/Tabs/Detail";
+import SearchNavigation from "./SearchNavigation";
 
 const Tab = createBottomTabNavigator();
 
@@ -92,9 +93,7 @@ export default ({navigation}) => {
           tabBarVisible: false,
         }}
       />
-      <Tab.Screen name="Detail" component={Detail} options={{
-        tabBarVisible:false,
-      }}/>
+
     </Tab.Navigator>
   );
 };
