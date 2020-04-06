@@ -8,6 +8,7 @@ import styles from "../styles";
 import { useMutation } from "react-apollo-hooks";
 import { gql } from "apollo-boost";
 import useInput from "../hooks/useInput";
+import { useNavigation } from "@react-navigation/native";
 
 const ADD_COMMENT = gql`
   mutation addComment($text: String!, $postId: String!) {
@@ -92,10 +93,11 @@ export const Post = ({
   comments,
   caption
 }) => {
+  const navigation = useNavigation();
   const [isLikeds, setIsLiked] = useState(isLiked);
   const [likeCounts, setLikeCount] = useState(likeCount);
   const [toggleLikeMutation] = useMutation(TOGGLE_LIKE, {
-    variables: { postId: id }
+    variables: { id }
   });
 
   const toggleLike = async () => {
@@ -115,13 +117,13 @@ export const Post = ({
   return (
     <Container>
       <Header>
-        <Touchable>
+        <Touchable onPress={()=> navigation.navigate("UserDetail",{userName:user.userName})}>
           <Image
             style={{ height: 40, width: 40, borderRadius: 40 }}
             source={{ uri: user.avatar }}
           />
         </Touchable>
-        <Touchable>
+        <Touchable  onPress={()=> navigation.navigate("UserDetail",{userName:user.userName})}>
           <HeaderUserContainer>
             <Bold>{user.userName}</Bold>
             <Text>{location}</Text>

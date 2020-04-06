@@ -6,7 +6,7 @@ import { gql } from "apollo-boost";
 import { USER_FRAGMENT } from "../../fragments";
 import { ScrollView } from "react-native";
 import { useQuery } from "react-apollo-hooks";
-
+import UserProfile from "../../components/UserProfile"
 const View = styled.View`
   justify-content: center;
   align-items: center;
@@ -26,8 +26,9 @@ const ME = gql`
 
 export default ({ navigation }) => {
   const { data, loading } = useQuery(ME);
+  console.log(data?.me);
   navigation.setOptions({
     headerTitle: () => <Text>{data.me.userName} </Text>,
   });
-  return null;
+return <ScrollView>{loading ? <Loader/> : data?.me && <UserProfile {...data.me} /> }</ScrollView>;
 };

@@ -27,7 +27,7 @@ export default ({route})=> {
     const postId = (route?.params?.data)
     const {data,loading} = useQuery(POST_DETAIL,{
         variables:{
-            id:postId
+            id:route?.params?.data
         }
     })
 
