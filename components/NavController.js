@@ -9,16 +9,7 @@ import TabNavigation from "../navigation/TabNavigation";
 import MainNavigation from "../navigation/MainNavigation";
 
 export default () => {
-  const isLoggedIn = useIsLoggedIn();
+  const isLoggedIn = useIsLoggedIn(true);
 
-  return (
-    <View style={{ flex: 1}}>
-      {isLoggedIn ? (
-        <MainNavigation/>
-      ) : (
-       <MainNavigation/>
-     //  <AuthNavigation/>
-      )}
-    </View>
-  );
+  return <MainNavigation/>
 };

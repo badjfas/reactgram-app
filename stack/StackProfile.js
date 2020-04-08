@@ -4,7 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Profile from "../screens/Tabs/Profile";
 import styled from "styled-components";
 import { BackArrowIcon } from "../components/NavIcon";
-import Search from "../screens/Tabs/Search";
+import Detail from "../screens/Tabs/Detail";
 import Home from "../screens/Tabs/Home";
 const Stack = createStackNavigator();
 
@@ -17,10 +17,8 @@ const View = styled.View``;
 export default ({navigation,route}) =>{
         return (
           <Stack.Navigator headerMode="screen">
-            <Stack.Screen
-              name="Profile"
-              component={Profile}
-            />
+            <Stack.Screen name="Profile" component={Profile} />
+            <Stack.Screen name="Detail" component={Detail} />
           </Stack.Navigator>
         );
 }

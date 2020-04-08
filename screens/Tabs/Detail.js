@@ -23,11 +23,10 @@ const View = styled.View`
 const Text = styled.Text`
 `;
 export default ({route})=> {
-    
-    const postId = (route?.params?.data)
+        console.log(route.params.id)
     const {data,loading} = useQuery(POST_DETAIL,{
         variables:{
-            id:route?.params?.data
+            id:route?.params?.id
         }
     })
 
