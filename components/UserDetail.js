@@ -29,7 +29,7 @@ export default ({route,navigation})=> {
             userName:route.params.userName
         }
     })
-    
+    console.log(route.params.userName,"UserDetail Call")
     navigation.setOptions({
         headerTitle: () => <Text>{data.seeProfile.userName} </Text>,
       });

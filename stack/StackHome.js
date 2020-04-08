@@ -28,7 +28,7 @@ export default ({navigation}) => {
   return (
     <Stack.Navigator headerMode="screen">
       <Stack.Screen
-        name=" "
+        name="Home"
         component={Home}
         options={{
           headerStyle: { backgroundColor: "#fafafa" },
@@ -55,6 +55,9 @@ export default ({navigation}) => {
       <Stack.Screen
         name="UserDetail"
         component={UserDetail}
+        options={{
+          
+        }}
       />
     </Stack.Navigator>
   );

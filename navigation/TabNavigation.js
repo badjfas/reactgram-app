@@ -88,9 +88,7 @@ export default ({navigation}) => {
             <ProfileIcon
               color={focused ? styles.blackColor : styles.darkGreyColor}
             />
-          ),
-          tabBarVisible: false,
-        }}
+          )        }}
       />
 
     </Tab.Navigator>

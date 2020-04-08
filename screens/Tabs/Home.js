@@ -31,8 +31,7 @@ const Text = styled.Text``;
 
 export default () => {
   const { loading, data, refetch } = useQuery(FEED_QUERY, {
-    fetchPolicy: "network-only",
-    notifyOnNetworkStatusChange:"true"
+    fetchPolicy:"cache-first"
   });
   const [refreshing,setRefreshing] = useState(false);
 

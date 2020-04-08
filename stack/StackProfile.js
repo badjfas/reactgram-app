@@ -20,23 +20,7 @@ export default ({navigation,route}) =>{
             <Stack.Screen
               name="Profile"
               component={Profile}
-              options={{
-                headerLeft: () => (
-                  <View>
-                    <TouchableOpacity
-                      onPress={() => {
-                        navigation.navigate("Home");
-                      }}
-                    >
-                      <BackArrowIcon size={25} style={{ padding: 15 }} />
-                    </TouchableOpacity>
-                  </View>
-                ),
-              }}
             />
-            <Stack.Screen name="Search" component={Search} />
-            <Stack.Screen name="Home" component={Home} />
-
           </Stack.Navigator>
         );
 }

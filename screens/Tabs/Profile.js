@@ -26,9 +26,7 @@ const ME = gql`
 
 export default ({ navigation }) => {
   const { data, loading } = useQuery(ME);
-  console.log(data?.me);
-  navigation.setOptions({
-    headerTitle: () => <Text>{data.me.userName} </Text>,
-  });
+  console.log(data.me,"Query ME Call");
+
 return <ScrollView>{loading ? <Loader/> : data?.me && <UserProfile {...data.me} /> }</ScrollView>;
 };

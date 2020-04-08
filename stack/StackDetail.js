@@ -15,28 +15,11 @@ const View = styled.View``;
 
 const Stack = createStackNavigator();
 
-export default ({navigation}) =>{
-        return (
-          <Stack.Navigator headerMode="screen">
-            <Stack.Screen
-              name=" "
-              component={Detail}
-              options={{
-                headerLeft: () => (
-                  <View>
-                    <TouchableOpacity
-                      onPress={() => {
-                        navigation.navigate("Search");
-                      }}
-                    >
-                      <BackArrowIcon size={25} style={{ padding: 15 }} />
-                    </TouchableOpacity>
-                  </View>
-                ),
-              }}
-            />
-            <Stack.Screen name="UserDetail" component={UserDetail} />
-            <Stack.Screen name="Profile" component={Profile} />
-          </Stack.Navigator>
-        );
-}
+export default ({ navigation }) => {
+  return (
+    <Stack.Navigator headerMode="screen">
+      <Stack.Screen name="Detail" component={Detail} />
+      <Stack.Screen name="UserDetail" component={UserDetail} />
+    </Stack.Navigator>
+  );
+};
