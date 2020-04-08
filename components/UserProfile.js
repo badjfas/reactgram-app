@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Image, View, TouchableOpacity } from "react-native";
+import { Image, View, TouchableOpacity, Picker } from "react-native";
 import styled from "styled-components";
 import { Ionicons } from "@expo/vector-icons";
 import PropTypes from "prop-types";
@@ -8,6 +8,7 @@ import { Platform } from "@unimodules/core";
 import constants from "../constants";
 import SquarePhoto from "./SquarePhoto";
 import Post from "./Post";
+import { ScrollView } from "react-native-gesture-handler";
 
 const ProfileHeader = styled.View`
   padding: 20px;
@@ -59,6 +60,9 @@ const SquareContainer = styled.View`
   flex-direction: row;
   flex-wrap: wrap;
 `;
+
+
+const Text = styled.Text``;
 
 const UserProfile = ({
   avatar,
@@ -120,10 +124,15 @@ const UserProfile = ({
         </TouchableOpacity>
       </ButtonContainer>
       <SquareContainer>
-        {posts &&
-          posts.map(p => (isGrid ? <SquarePhoto key={p.id} {...p} /> : null))}
+      {posts &&
+        posts.map(p =>
+          isGrid ? (
+            <SquarePhoto key={p.id} {...p} />
+          ) : (
+            <SquarePhoto key={p.id} {...p} />
+          )
+        )}
       </SquareContainer>
-      {posts && posts.map(p => (isGrid ? null : <Post key={p.id} {...p} />))}
     </View>
   );
 };
