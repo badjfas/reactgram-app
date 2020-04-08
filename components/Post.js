@@ -97,7 +97,7 @@ export const Post = ({
   const [isLikeds, setIsLiked] = useState(isLiked);
   const [likeCounts, setLikeCount] = useState(likeCount);
   const [toggleLikeMutation] = useMutation(TOGGLE_LIKE, {
-    variables: { id }
+    variables: { postId:id }
   });
 
   const toggleLike = async () => {
@@ -131,7 +131,7 @@ export const Post = ({
         </Touchable>
       </Header>
       <Swiper
-        showsPagination={false}
+        showsPagination={true}
         style={{ borderTopColor: "black", height: constants.height / 2 }}
       >
         {files.map(file => (
